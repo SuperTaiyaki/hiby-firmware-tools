@@ -1,5 +1,0 @@
-Want to preprocess the script (mostly comments, but who knows what else....)
-what would work as a generic preprocessor that's not too annoying?
-    erb
-    m4 (ewwww)
-    shell substitutions
