@@ -1,4 +1,7 @@
-In order to play with the Hiby R3 firmware:
+Tools to unpack and repack the Hiby R3 firmware
+===============================================
+
+To use:
 Follow the instructions in unpack.md to extract the firmware
 Put the contents of the filesystem in the firmware-1.7-custom folder (or modify the script to point to your modified filesystem)
 Put the contents of the original update package in a customfw folder
