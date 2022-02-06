@@ -1,5 +1,7 @@
 Tools to unpack and repack the Hiby R3 firmware
 ===============================================
+This was build for the Hiby R3 Pro and R3 Pro Saber DAPs. I've only got the R3 Pro to test but Hiby provide the same updates
+for both. The general procedure should work with most Hiby-backed players (Shanling, Hidizs....) but I haven't verified anything.
 
 To use:
 * Follow the instructions in unpack.md to extract the firmware
@@ -17,4 +19,4 @@ firmware file the player expects.
 Write the resulting file to r3pro.upt on the player and execute a firmware update.
 
 
-If you're using Windows, track down a copy of the Shanling theme editor.
+If you're using Windows, track down a copy of the Shanling theme editor. It has the tools to unpack repack the images.
