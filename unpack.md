@@ -2,15 +2,15 @@ Not writing this as a script because it involves some messing around as root.
 
 First: Grab the .upt file from Hiby
 It's an iso9660 image so unpack it with something
-    7z x r3pro-1.7rpt
+
+    7z x r3pro-1.7.upt
 
 The SYSTEM.UBI inside is the file we want.
 
-Next: Set up your system with a fake NAND flash device to flash the UBIFS file
-
+Next: Set up a fake NAND flash device to flash the UBIFS file.
 
 VERY IMPORTANT: Check if your system already has any MTD nodes before starting this - overwriting those
-with the R3 firmware would be bad.
+with the R3 firmware would be bad. The new mtd device should appear at the next available ID.
 ```
 modprobe nandsim first_id_byte=0x2c second_id_byte=0xda \
 third_id_byte=0x90 fourth_id_byte=0x95
