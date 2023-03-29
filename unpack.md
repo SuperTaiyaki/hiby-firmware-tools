@@ -15,10 +15,10 @@ with the R3 firmware would be bad. The new mtd device should appear at the next 
 modprobe nandsim first_id_byte=0x2c second_id_byte=0xda \
 third_id_byte=0x90 fourth_id_byte=0x95
 flash_erase /dev/mtd0 0 0
-ubiformat /dev/mtd0 -s 2048 -O 2048
+ubiformat /dev/mtd0
 modprobe ubi
-ubiattach -m 0 -d 0 -O 2048
-ubimkvol /dev/ubi0 -N hiby -m # -m = max size
+ubiattach -m 0
+ubimkvol /dev/ubi0 -a 4096 -N hiby -s 128MiB
 ubiupdatevol /dev/ubi0_0 SYSTEM.UBI
 mount /dev/ubi0_0 /mnt
 ```

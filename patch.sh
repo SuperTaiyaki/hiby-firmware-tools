@@ -9,6 +9,14 @@ s/collate pinyin/              /g
 s/VOROIS/VORBIS/g
 EOF
 
+# Change max file limit from 20,000 to 65,000 (0x4e20 -> 0xfde8)
+# a2af 204e 0224
+# No idea what sort of data this actually is so this is a bit fragile
+# For some reason, adding one byte to the front breaks this but 2 is fine
+cat <<EOF
+s/\x02\xa2\xaf\x20\x4e\x02\x24\x2c/\x02\xa2\xaf\xfd\xe8\x02\x24\x2c/
+EOF
+
 # Replace genre lists with 3 random albums
 if [[ -n $ALBUM_SORT ]]
 then
